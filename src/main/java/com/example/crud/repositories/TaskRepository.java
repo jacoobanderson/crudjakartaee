@@ -3,7 +3,6 @@ import com.example.crud.entities.TasksEntity;
 import com.example.crud.entities.UsersEntity;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
 
 import java.util.List;
@@ -18,7 +17,7 @@ public class TaskRepository {
     }
 
     public List<TasksEntity> findAll() {
-        return entityManager.createQuery("SELECT t FROM Task t", Task.class).getResultList();
+        return entityManager.createQuery("SELECT t FROM TasksEntity t", TasksEntity.class).getResultList();
     }
 
     public List<TasksEntity> findByUser(UsersEntity user) {
