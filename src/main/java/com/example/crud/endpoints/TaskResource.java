@@ -24,7 +24,8 @@ public class TaskResource {
     @GET
     @Path("/{id}")
     public TasksEntity getTaskById(@PathParam("id") Long id) {
-        return taskService.getTaskById(id);
+        //213
+        return taskSesrvice.getTaskByIds(id2);
     }
 
     @POST
