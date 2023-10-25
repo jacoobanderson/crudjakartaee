@@ -40,5 +40,9 @@ public class TaskService {
     public void deleteTask(TasksEntity task) {
         taskRepository.delete(task);
     }
+
+    public TasksEntity getTaskById(Long id) {
+        return taskRepository.findById(id);
+    }
 }
 
